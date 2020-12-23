@@ -8,6 +8,6 @@ spec:
     app: write-where-what
   ports:
   - protocol: TCP
-    port: 9003
-    targetPort: 9003
+    port: 9000
+    targetPort: 9000
     nodePort: 30003
