@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: beginners-shell-service
 spec:
+  type: NodePort
   selector:
     app: beginners-shell
   ports:
