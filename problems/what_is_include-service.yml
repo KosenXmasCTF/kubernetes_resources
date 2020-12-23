@@ -8,6 +8,6 @@ spec:
     app: what-is-include
   ports:
   - protocol: TCP
-    port: 9004
-    targetPort: 9004
+    port: 22
+    targetPort: 22
     nodePort: 30004
