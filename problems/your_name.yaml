@@ -1,18 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: your_name
+  name: your-name
   labels:
-    app: your_name
+    app: your-name
 spec:
   selector:
     matchLabels:
-      app: your_name
+      app: your-name
   template:
     metadata:
       labels:
-        app: your_name
+        app: your-name
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
-      - name: your-name-main
-        image: docker.pkg.github.com/kosenxmasctf/your_name/your_name:latest
+      - name: frontend
+        image: docker.pkg.github.com/kosenxmasctf/your_name/your_name_frontend:0.1.0
+      - name: hidden
+        image: docker.pkg.github.com/kosenxmasctf/your_name/your_name_hidden:0.1.0
