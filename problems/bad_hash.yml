@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bad_hash
+  name: bad-hash
   labels:
-    app: bad_hash
+    app: bad-hash
 spec:
   selector:
     matchLabels:
-      app: bad_hash
+      app: bad-hash
   template:
     metadata:
       labels:
-        app: bad_hash
+        app: bad-hash
     spec:
       imagePullSecrets:
         - name: regcred
