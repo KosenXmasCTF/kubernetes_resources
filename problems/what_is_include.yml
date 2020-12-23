@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: what-is-include
+  labels:
+    app: what-is-include
+spec:
+  selector:
+    matchLabels:
+      app: what-is-include
+  template:
+    metadata:
+      labels:
+        app: what-is-include
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: socat
+          image: docker.pkg.github.com/kosenxmasctf/what_is_include/what_is_include:0.1.0
