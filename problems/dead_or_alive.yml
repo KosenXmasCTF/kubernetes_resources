@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dead-or-alive
+  labels:
+    app: dead-or-alive
+spec:
+  selector:
+    matchLabels:
+      app: dead-or-alive
+  template:
+    metadata:
+      labels:
+        app: dead-or-alive
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: socat
+          image: docker.pkg.github.com/kosenxmasctf/dead_or_alive/dead_or_alive:0.1.0
