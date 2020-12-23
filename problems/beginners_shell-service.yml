@@ -10,4 +10,4 @@ spec:
   - protocol: TCP
     port: 9002
     targetPort: 9002
-    nodePort: 9002
+    nodePort: 30002
