@@ -22,3 +22,9 @@ spec:
       - backend:
           serviceName: your-name-service
           servicePort: 443
+  - host: sailor-or-blazor.xm4s.net
+    http:
+      paths:
+      - backend:
+          serviceName: sailor-or-blazor-service
+          servicePort: 443

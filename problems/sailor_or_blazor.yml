@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sailor-or-blazor 
+  labels:
+    app: sailor-or-blazor
+spec:
+  selector:
+    matchLabels:
+      app: sailor-or-blazor
+  template:
+    metadata:
+      labels:
+        app: sailor-or-blazor
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: socat
+          image: docker.pkg.github.com/kosenxmasctf/sailor_or_blazor/sailor_or_blazor:0.1.0
