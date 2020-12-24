@@ -1,20 +1,41 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bad-path
+  name: bad-path-nginx
   labels:
-    app: bad-path
+    app: bad-path-nginx
 spec:
   selector:
     matchLabels:
-      app: bad-path
+      app: bad-path-nginx
   template:
     metadata:
       labels:
-        app: bad-path
+        app: bad-path-nginx
     spec:
       imagePullSecrets:
         - name: regcred
       containers:
         - name: socat
-          image: docker.pkg.github.com/kosenxmasctf/bad_path/bad_path:0.1.1
+          image: docker.pkg.github.com/kosenxmasctf/bad_path/bad_path_nginx:0.1.2
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bad-path-app
+  labels:
+    app: bad-path-app
+spec:
+  selector:
+    matchLabels:
+      app: bad-path-app
+  template:
+    metadata:
+      labels:
+        app: bad-path-app
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: socat
+          image: docker.pkg.github.com/kosenxmasctf/bad_path/bad_path_app:0.1.2
