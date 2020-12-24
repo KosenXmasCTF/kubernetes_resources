@@ -17,4 +17,4 @@ spec:
         - name: regcred
       containers:
         - name: socat
-          image: ghcr.io/kosenxmasctf/decryptor/decryptor:latest
+          image: ghcr.io/kosenxmasctf/decryptor/decryptor:0.1.0
