@@ -4,8 +4,20 @@ metadata:
   name: sailor-or-blazor-service
 spec:
   selector:
-    app: sailor-or-blazor
+    app: sailor-or-blazor-nginx
   ports:
   - protocol: TCP
     port: 443
     targetPort: 443
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: php
+spec:
+  selector:
+    app: sailor-or-blazor-app
+  ports:
+  - protocol: TCP
+    port: 9000
+    targetPort: 9000
