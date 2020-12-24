@@ -28,3 +28,9 @@ spec:
       - backend:
           serviceName: sailor-or-blazor-service
           servicePort: 443
+  - host: bad-path.xm4s.net
+    http:
+      paths:
+      - backend:
+          serviceName: bad-path-nginx-service
+          servicePort: 443
