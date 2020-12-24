@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bad_path
+  name: bad-path
   labels:
-    app: bad_path
+    app: bad-path
 spec:
   selector:
     matchLabels:
-      app: bad_path
+      app: bad-path
   template:
     metadata:
       labels:
-        app: bad_path
+        app: bad-path
     spec:
       imagePullSecrets:
         - name: regcred
