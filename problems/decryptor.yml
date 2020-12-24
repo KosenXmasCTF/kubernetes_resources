@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: decryptor
+  labels:
+    app: decryptor
+spec:
+  selector:
+    matchLabels:
+      app: decryptor
+  template:
+    metadata:
+      labels:
+        app: decryptor
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: socat
+          image: ghcr.io/kosenxmasctf/decryptor/decryptor:latest
