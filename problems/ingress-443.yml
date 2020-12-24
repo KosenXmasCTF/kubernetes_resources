@@ -3,6 +3,10 @@ kind: Ingress
 metadata:
   name: name-virtual-host-ingress
 spec:
+  tls:
+  - hosts:
+      - your-name.xm4s.net
+      - hidden.your-name.xm4s.net
   rules:
   - host: your-name.xm4s.net
     http:
